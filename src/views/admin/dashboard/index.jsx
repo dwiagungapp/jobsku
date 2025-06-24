@@ -64,7 +64,7 @@ export default function Dashboard() {
   const handleDelete = async (id) => {
     if (!confirm("Yakin ingin menghapus?")) return;
     try {
-      await Api.delete(`/${id}`);
+      await Api.delete(`/api/pekerjaan/${id}`);
       fetchPage(currentPage);
     } catch {
       alert("Gagal menghapus");
